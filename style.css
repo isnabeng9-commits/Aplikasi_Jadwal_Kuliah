@@ -1,0 +1,326 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* =========================
+BODY
+========================= */
+body {*
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #ecfdf5, #d1fae5, #f0fdf4);
+color: #164e35;
+}
+
+/* =========================
+CONTAINER
+========================= */
+.container {
+width: 90%;
+max-width: 1100px;
+margin: auto;
+padding: 25px 0;
+}
+
+/* =========================
+HEADER
+========================= */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
+}
+
+.logo {
+font-size: 25px;
+font-weight: bold;
+color: #047857;
+}
+
+.tanggal {
+background: white;
+padding: 12px;
+border-radius: 12px;
+font-size: 13px;
+color: #047857;
+box-shadow: 0 4px 12px #bbf7d0;
+}
+
+/* =========================
+HERO SECTION
+========================= */
+.hero {
+background: linear-gradient(120deg, #047857, #10b981, #34d399);
+color: white;
+padding: 35px;
+border-radius: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 8px 22px #86efac;
+}
+
+.hero h1 {
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+.hero p {
+color: #ecfdf5;
+}
+
+.hero-icon {
+font-size: 65px;
+}
+
+/* =========================
+KARTU STATISTIK
+========================= */
+.statistik {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+margin: 25px 0;
+}
+
+.stat-card {
+background: white;
+padding: 22px;
+text-align: center;
+border-radius: 16px;
+box-shadow: 0 5px 15px #bbf7d0;
+cursor: pointer;
+border: 1px solid #d1fae5;
+width: 100%;
+font-family: inherit;
+transition: 0.3s;
+}
+
+.stat-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 10px 22px #86efac;
+}
+
+.stat-card:active {
+transform: scale(0.97);
+}
+
+.stat-card h3 {
+font-size: 14px;
+color: #64748b;
+}
+
+.stat-card p {
+font-size: 30px;
+color: #059669;
+font-weight: bold;
+margin-top: 10px;
+}
+
+.stat-card small {
+display: block;
+color: #64748b;
+margin-top: 8px;
+}
+
+/* =========================
+FORM DAN JADWAL
+========================= */
+.form-box,
+.jadwal-box {
+background: white;
+padding: 25px;
+border-radius: 18px;
+margin-bottom: 25px;
+box-shadow: 0 5px 18px #bbf7d0;
+border: 1px solid #d1fae5;
+}
+
+h2 {
+margin-bottom: 20px;
+color: #047857;
+}
+
+/* =========================
+FORM INPUT
+========================= */
+form {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+}
+
+input,
+select {
+width: 100%;
+padding: 13px;
+border: 1px solid #a7f3d0;
+border-radius: 10px;
+outline: none;
+background: #f0fdf4;
+color: #14532d;
+font-size: 14px;
+}
+
+input:focus,
+select:focus {
+border-color: #059669;
+box-shadow: 0 0 0 3px #d1fae5;
+}
+
+label {
+font-size: 13px;
+color: #166534;
+align-self: center;
+}
+
+/* =========================
+TOMBOL
+========================= */
+button {
+border: none;
+padding: 13px;
+border-radius: 10px;
+background: linear-gradient(120deg, #059669, #10b981);
+color: white;
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+background: #047857;
+transform: translateY(-2px);
+}
+
+form button {
+grid-column: 1 / -1;
+}
+
+/* =========================
+PENCARIAN DAN FILTER
+========================= */
+#cari,
+#filterHari {
+margin-bottom: 15px;
+}
+
+/* =========================
+ITEM JADWAL
+========================= */
+.item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 12px;
+padding: 17px;
+margin-bottom: 12px;
+background: #ecfdf5;
+border-left: 5px solid #10b981;
+border-radius: 12px;
+transition: 0.3s;
+}
+
+.item:hover {
+background: #d1fae5;
+transform: translateX(4px);
+}
+
+.item h3 {
+color: #065f46;
+margin-bottom: 6px;
+}
+
+.item p {
+color: #64748b;
+font-size: 13px;
+margin: 4px 0;
+}
+
+.item button {
+margin: 3px;
+font-size: 11px;
+padding: 9px;
+}
+
+/* =========================
+TOMBOL HAPUS
+========================= */
+.item .hapus {
+background: #ef4444;
+}
+
+.item .hapus:hover {
+background: #b91c1c;
+}
+
+/* =========================
+TOMBOL SELESAI
+========================= */
+.item .done {
+background: #16a34a;
+}
+
+.item .done:hover {
+background: #166534;
+}
+
+/* =========================
+JADWAL SELESAI
+========================= */
+.item.sudah {
+opacity: 0.6;
+}
+
+.item.sudah h3 {
+text-decoration: line-through;
+}
+
+/* =========================
+FOOTER
+========================= */
+footer {
+text-align: center;
+padding: 20px;
+color: #64748b;
+font-size: 13px;
+}
+
+/* =========================
+RESPONSIVE HP
+========================= */
+@media (max-width: 650px) {
+
+.statistik {
+    grid-template-columns: 1fr;
+}
+
+form {
+    grid-template-columns: 1fr;
+}
+
+.hero {
+    padding: 25px;
+}
+
+.hero h1 {
+    font-size: 22px;
+}
+
+.hero-icon {
+    font-size: 40px;
+}
+
+.item {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+header {
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+}
