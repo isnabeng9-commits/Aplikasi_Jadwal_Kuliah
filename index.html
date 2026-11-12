@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyFlow - Jadwal Kuliah Pintar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="logo">📚 StudyFlow</div>
+      <div class="tanggal" id="tanggal"></div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Jadwal Kuliah Pintar</h1>
+        <p>Atur jadwal kuliahmu agar belajar lebih teratur!
+          Isna semangat ya !
+        </p>
+      </div>
+      <div class="hero-icon">🎓</div>
+    </section>
+
+    <<section class="statistik">
+
+  <button class="stat-card" type="button"
+    onclick="lihatStatistik('total')">
+    <h3>Total Jadwal</h3>
+    <p id="total">0</p>
+    <small>Klik untuk melihat semua jadwal</small>
+  </button>
+
+  <button class="stat-card" type="button"
+    onclick="lihatStatistik('hariIni')">
+    <h3>Jadwal Hari Ini</h3>
+    <p id="hariIni">0</p>
+    <small>Klik untuk melihat jadwal hari ini</small>
+  </button>
+
+  <button class="stat-card" type="button"
+    onclick="lihatStatistik('selesai')">
+    <h3>Selesai</h3>
+    <p id="selesai">0</p>
+    <small>Klik untuk melihat jadwal selesai</small>
+  </button>
+
+</section>
+
+    <section class="form-box">
+      <h2>➕ Tambah Jadwal Kuliah</h2>
+
+      <form id="formJadwal">
+        <input type="text" id="matkul"
+          placeholder="Nama Mata Kuliah" required>
+
+        <input type="text" id="dosen"
+          placeholder="Nama Dosen" required>
+
+        <select id="hari" required>
+          <option value="">Pilih Hari</option>
+          <option>Senin</option>
+          <option>Selasa</option>
+          <option>Rabu</option>
+          <option>Kamis</option>
+          
+        </select>
+
+        <input type="text" id="ruang"
+          placeholder="Nama Ruangan" required>
+
+        <label>Jam Mulai</label>
+        <input type="time" id="mulai" required>
+
+        <label>Jam Selesai</label>
+        <input type="time" id="akhir" required>
+
+        <button type="submit">Simpan Jadwal</button>
+      </form>
+    </section>
+
+    <section class="jadwal-box">
+      <h2>📅 Daftar Jadwal Kuliah</h2>
+
+      <input type="search" id="cari"
+        placeholder="Cari mata kuliah atau dosen...">
+
+      <select id="filterHari">
+        <option value="Semua">Semua Hari</option>
+        <option>Senin</option>
+        <option>Selasa</option>
+        <option>Rabu</option>
+        <option>Kamis</option>
+        <option>Jumat</option>
+        <option>Sabtu</option>
+      </select>
+
+      <div id="daftarJadwal"></div>
+    </section>
+
+    <footer>
+      <p>© 2026 StudyFlow | Jadwal Kuliah Semester 5</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
